@@ -2,17 +2,25 @@ const exchangeValuesURL = 'https://api.coingecko.com/api/v3/exchange_rates'
 
 function addToPage(data) {
   let div = document.createElement('div')
-  let ul = document.createElement('ul')
+  let table = document.createElement('table')
   for (key in data) {
-    let li = document.createElement('li')
-    li.textContent = `(${data[key].unit}) ${data[key].name} -- ${data[key].value} (${data[key].type})`
-    let button = document.createElement('button')
-    button.textContent = 'Details (open modal)'
+    const tr = document.createElement('tr')
+    const type = document.createElement('td')
+    const unit = document.createElement('td')
+    const name = document.createElement('td')
+    const rate = document.createElement('td')
+    type.textContent = data[key].type
+    unit.textContent = data[key].unit
+    name.textContent = data[key].name
+    rate.textContent = data[key].value
 
-    li.appendChild(button)
-    ul.appendChild(li)
+    tr.append(type)
+    tr.append(unit)
+    tr.append(name)
+    tr.append(rate)
+    table.appendChild(tr)
   }
-  div.appendChild(ul)
+  div.appendChild(table)
   document.querySelector('.main').appendChild(div)
 }
 
