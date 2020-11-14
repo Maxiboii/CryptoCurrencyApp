@@ -1,0 +1,48 @@
+.main {
+  background: linear-gradient(to bottom, rgba(92, 77, 66, 0) 0%, rgba(92, 77, 66, 00) 100%), url("https://share.ansi.org/Shared%20Documents/News%20and%20Publications/Website%202019/Images/GettyImages-805088558%20(Light%20Technology%20Background,%20Abstract).jpg");
+    background-color: rgb(213, 220, 228);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-size: cover;
+    color: rgb(57, 21, 105);
+}
+
+body {
+  padding: 0;
+    margin: 0;
+}
+
+button {
+  color: rgb(57, 21, 105);
+  border: 0;
+  border-radius: 5px;
+  padding: 10px 10px;
+}
+
+button:hover {
+  background-color: rgb(148, 148, 148);
+  cursor: pointer;
+}
+
+.main table {
+  margin: auto;
+}
+
+nav {
+  height: 20px;
+  height: 50px;
+  text-align: center;
+  padding-top: 20px;
+}
+
+nav a {
+  text-decoration: none;
+  background-color: #fff;
+  padding: 20px 40px;
+  border-radius: 10px;
+}
+
+.main td {
+  padding: 3px 15px;
+}

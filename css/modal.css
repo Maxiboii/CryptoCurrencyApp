@@ -44,7 +44,7 @@
 }
 
 .modal-window {
-    width: 600px;
+    max-width: 700px;
     border-radius: 5px;
     background: #fff;
     margin: 0 auto;
@@ -78,4 +78,27 @@
 .modal-footer {
     padding: 5px 10px;
     border-top: 1px solid #eee;
+    text-align: right;
+}
+
+p {
+    text-align: center;
+    padding-top: 8px;
+}
+
+.modal-body td {
+    padding: 3px 10px;
+}
+
+.modal-body a {
+    text-decoration: none;
+    padding: 10px 15px;
+    background: rgb(239, 239, 239);
+    color: #000;
+    border-radius: 5px;
+}
+
+.modal-body a:hover {
+    background-color: rgb(148, 148, 148);
+    cursor: pointer;
 }

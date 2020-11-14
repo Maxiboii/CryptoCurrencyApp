@@ -44,7 +44,7 @@ fetch(exchangesURL, {
   const detailModal = $.modal({
     title: 'Detail',
     closable: true,
-    width: '500px',
+    width: '60%',
     footerButtons: [
         {text: 'Close', type: 'primary', handler() {
           detailModal.close()
@@ -54,18 +54,20 @@ fetch(exchangesURL, {
 
 
   document.querySelector('.main').addEventListener('click', event => {
-      event.preventDefault()
       const btnType = event.target.dataset.btn
       const id = event.target.dataset.id
       const currency = json.find(c => c.id === id)
             
       if (btnType === 'detail') {
+        event.preventDefault()
         console.log(currency)
         const description = currency.description === null ? '' : currency.description
         detailModal.setContent(`
           <table>
-          <tr><td><img src="${currency.image}"</img></td></tr>
-          <tr><td>${currency.name}</td></tr>
+          <tr>
+          <td><img src="${currency.image}"</img></td>
+          <td><b>${currency.name}</b></td>
+          </tr>
           <tr><td>Trade volume</td>
               <td>${currency.trade_volume_24h_btc_normalized}</td>
           </tr>

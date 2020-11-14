@@ -11,13 +11,14 @@ function addToPage(data) {
     const rate = document.createElement('td')
     type.textContent = data[key].type
     unit.textContent = data[key].unit
+    unit.style = 'font-weight: 600'
     name.textContent = data[key].name
     rate.textContent = data[key].value
 
-    tr.append(type)
-    tr.append(unit)
     tr.append(name)
+    tr.append(unit)
     tr.append(rate)
+    tr.append(type)
     table.appendChild(tr)
   }
   div.appendChild(table)
