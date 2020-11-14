@@ -61,7 +61,8 @@ fetch(exchangesURL, {
       if (btnType === 'detail') {
         event.preventDefault()
         console.log(currency)
-        const description = currency.description === null ? '' : currency.description
+        const description = currency.description === null || currency.description === '' ? '-' : currency.description
+        const country = currency.country === null || currency.country === '' ? '-' : currency.country
         detailModal.setContent(`
           <table>
           <tr>
@@ -72,7 +73,7 @@ fetch(exchangesURL, {
               <td>${currency.trade_volume_24h_btc_normalized}</td>
           </tr>
           <tr><td>Country</td>
-              <td>${currency.country}</td>
+              <td>${country}</td>
           </tr>
           <tr><td>Description</td>
               <td>${description}</td>
